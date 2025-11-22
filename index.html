@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ethereum.org Clone - Đa ngôn ngữ</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 0L0 9v6l12 9 12-9V9z' fill='%23339bf0'/></svg>">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dark-mode">
+
+  <header class="header">
+    <div class="container">
+      <a href="#" class="logo">
+        <svg viewBox="0 0 24 24" width="32" height="32"><path d="M12 0L0 9v6l12 9 12-9V9z" fill="currentColor"/></svg>
+        <span data-lang="logo">Ethereum</span>
+      </a>
+      
+      <nav class="nav-main">
+        <a href="#use-cases" data-lang="nav-usecases">Trường hợp sử dụng</a>
+        <a href="#ecosystem" data-lang="nav-ecosystem">Hệ sinh thái</a>
+        <a href="#learn" data-lang="nav-learn">Học tập</a>
+        <a href="#developers" data-lang="nav-dev">Nhà phát triển</a>
+        <a href="#community" data-lang="nav-community">Cộng đồng</a>
+      </nav>
+      
+      <div class="header-actions">
+        <!-- ĐÃ THÊM id="lang-select" Ở ĐÂY -->
+        <select id="lang-select" class="lang-select">
+          <option value="vi">Tiếng Việt</option>
+          <option value="en">English</option>
+        </select>
+        <button class="search-btn">Search</button>
+        <button class="theme-toggle">Moon</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <!-- Dùng data-lang riêng cho text và highlight để tránh lỗi -->
+      <h1 class="hero-title">
+        <span data-lang="hero-title-1">Chào mừng đến với</span><br>
+        <span class="highlight" data-lang="hero-title-2">Ethereum</span>
+      </h1>
+      <p class="hero-desc" data-lang="hero-desc">
+        Ethereum là một nền tảng mã nguồn mở toàn cầu cho các ứng dụng phi tập trung.
+      </p>
+      <div class="hero-ctas">
+        <a href="#" class="cta-primary" data-lang="cta-build">Bắt đầu xây dựng</a>
+        <a href="#" class="cta-secondary" data-lang="cta-explore">Khám phá Ethereum</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Các section khác (giữ nguyên data-lang như cũ là ok) -->
+  <section id="use-cases" class="section use-cases">
+    <div class="container">
+      <h2 data-lang="usecases-title">Trường hợp sử dụng</h2>
+      <div class="grid">
+        <article class="card"><h3>DeFi</h3><p data-lang="defi-desc">Tài chính phi tập trung: Cho vay, vay mượn, giao dịch không cần trung gian.</p><a href="#">Tìm hiểu thêm</a></article>
+        <article class="card"><h3>NFTs</h3><p data-lang="nfts-desc">Token không thể thay thế: Sở hữu kỹ thuật số độc đáo cho nghệ thuật và sưu tầm.</p><a href="#">Tìm hiểu thêm</a></article>
+        <article class="card"><h3>DAO</h3><p data-lang="dao-desc">Tổ chức tự trị phi tập trung: Quản trị cộng đồng qua bỏ phiếu on-chain.</p><a href="#">Tìm hiểu thêm</a></article>
+        <article class="card"><h3>Social & Gaming</h3><p data-lang="social-desc">Mạng xã hội và trò chơi phi tập trung: Sở hữu tài sản và dữ liệu của bạn.</p><a href="#">Tìm hiểu thêm</a></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="ecosystem" class="section ecosystem">
+    <div class="container">
+      <h2 data-lang="ecosystem-title">Hệ sinh thái Ethereum</h2>
+      <div class="stats-grid">
+        <div class="stat"><span class="stat-number">1M+</span><span class="stat-label" data-lang="stat-apps">Ứng dụng phi tập trung</span></div>
+        <div class="stat"><span class="stat-number">$500B+</span><span class="stat-label" data-lang="stat-tvl">Giá trị khóa (TVL)</span></div>
+        <div class="stat"><span class="stat-number">300M+</span><span class="stat-label" data-lang="stat-tx">Giao dịch hàng năm</span></div>
+      </div>
+      <a href="#" class="cta-secondary" data-lang="explore-ecosystem">Khám phá hệ sinh thái</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p data-lang="footer-copyright">&copy; 2025 Ethereum Foundation. Mã nguồn mở.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS đa ngôn ngữ (đã sửa hoàn chỉnh) -->
+  <script>
+    const translations = {
+      vi: {
+        "logo": "Ethereum",
+        "nav-usecases": "Trường hợp sử dụng", "nav-ecosystem": "Hệ sinh thái", "nav-learn": "Học tập", "nav-dev": "Nhà phát triển", "nav-community": "Cộng đồng",
+        "hero-title-1": "Chào mừng đến với", "hero-title-2": "Ethereum",
+        "hero-desc": "Ethereum là một nền tảng mã nguồn mở toàn cầu cho các ứng dụng phi tập trung.",
+        "cta-build": "Bắt đầu xây dựng", "cta-explore": "Khám phá Ethereum",
+        "usecases-title": "Trường hợp sử dụng",
+        "defi-desc": "Tài chính phi tập trung: Cho vay, vay mượn, giao dịch không cần trung gian.",
+        "nfts-desc": "Token không thể thay thế: Sở hữu kỹ thuật số độc đáo cho nghệ thuật và sưu tầm.",
+        "dao-desc": "Tổ chức tự trị phi tập trung: Quản trị cộng đồng qua bỏ phiếu on-chain.",
+        "social-desc": "Mạng xã hội và trò chơi phi tập trung: Sở hữu tài sản và dữ liệu của bạn.",
+        "ecosystem-title": "Hệ sinh thái Ethereum",
+        "stat-apps": "Ứng dụng phi tập trung", "stat-tvl": "Giá trị khóa (TVL)", "stat-tx": "Giao dịch hàng năm",
+        "explore-ecosystem": "Khám phá hệ sinh thái",
+        "footer-copyright": "© 2025 Ethereum Foundation. Mã nguồn mở."
+      },
+      en: {
+        "logo": "Ethereum",
+        "nav-usecases": "Use Cases", "nav-ecosystem": "Ecosystem", "nav-learn": "Learn", "nav-dev": "Developers", "nav-community": "Community",
+        "hero-title-1": "Welcome to", "hero-title-2": "Ethereum",
+        "hero-desc": "Ethereum is a global, open-source platform for decentralized applications.",
+        "cta-build": "Start building", "cta-explore": "Explore Ethereum",
+        "usecases-title": "Use Cases",
+        "defi-desc": "Decentralized finance: Lending, borrowing, and trading without intermediaries.",
+        "nfts-desc": "Non-fungible tokens: Unique digital ownership for art and collectibles.",
+        "dao-desc": "Decentralized autonomous organizations: Community governance via on-chain voting.",
+        "social-desc": "Decentralized social & gaming: Own your assets and data.",
+        "ecosystem-title": "Ethereum Ecosystem",
+        "stat-apps": "Decentralized apps", "stat-tvl": "Total Value Locked (TVL)", "stat-tx": "Transactions per year",
+        "explore-ecosystem": "Explore the ecosystem",
+        "footer-copyright": "© 2025 Ethereum Foundation. Open source."
+      }
+    };
+
+    const langSelect = document.getElementById('lang-select');
+
+    function setLanguage(lang) {
+      document.querySelectorAll('[data-lang]').forEach(el => {
+        const key = el.getAttribute('data-lang');
+        if (translations[lang] && translations[lang][key]) {
+          el.innerHTML = translations[lang][key];
+        }
+      });
+      document.documentElement.lang = lang;
+      localStorage.setItem('language', lang);
+    }
+
+    // Load ngôn ngữ đã lưu
+    const savedLang = localStorage.getItem('language') || 'vi';
+    setLanguage(savedLang);
+    langSelect.value = savedLang;
+
+    // Thay đổi khi chọn
+    langSelect.addEventListener('change', (e) => {
+      setLanguage(e.target.value);
+    });
+  </script>
+</body>
+</html>
